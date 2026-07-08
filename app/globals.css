@@ -375,58 +375,15 @@ h2.section-title {
   padding-bottom: 60px;
   position: relative;
 }
-/* data-packet streaks: brief comet trails crossing the hero, pure CSS */
-.hero::before,
-.hero::after {
-  content: "";
+/* living node-network behind the hero (canvas), faded toward the edges */
+.net-field {
   position: absolute;
-  left: -180px;
-  width: 150px;
-  height: 1.5px;
-  border-radius: 2px;
+  inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0;
-  background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.65), rgba(45, 212, 191, 0.15));
-  box-shadow: 0 0 12px rgba(45, 212, 191, 0.25);
-  animation: streak 9s linear infinite;
-}
-.hero::before {
-  top: 16%;
-}
-.hero::after {
-  top: 52%;
-  width: 110px;
-  animation-duration: 13s;
-  animation-delay: 5s;
-  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.55), rgba(34, 211, 238, 0.12));
-  box-shadow: 0 0 12px rgba(34, 211, 238, 0.2);
-}
-@keyframes streak {
-  0% {
-    transform: translate(0, 0) rotate(8deg);
-    opacity: 0;
-  }
-  3% {
-    opacity: 0.9;
-  }
-  20% {
-    opacity: 0.9;
-  }
-  26% {
-    transform: translate(115vw, 16vh) rotate(8deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(115vw, 16vh) rotate(8deg);
-    opacity: 0;
-  }
-}
-@media (max-width: 880px) {
-  .hero::before,
-  .hero::after {
-    display: none;
-  }
+  opacity: 0.85;
+  mask-image: radial-gradient(ellipse 85% 80% at 50% 42%, black 30%, transparent 98%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 80% at 50% 42%, black 30%, transparent 98%);
 }
 .hero-grid {
   display: grid;
