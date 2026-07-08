@@ -1,5 +1,6 @@
 import { hero } from "@/content/profile";
 import Counter from "./Counter";
+import NetworkField from "./NetworkField";
 
 /** Animated schematic of the real production pipeline — the hero's centerpiece.
  *  AI screens & prioritizes → humans call the hot leads → AI QA reviews every call. */
@@ -58,6 +59,7 @@ function PipelineVisual() {
 export default function Hero() {
   return (
     <section className="hero" aria-label="Introduction">
+      <NetworkField />
       <div className="container">
         <div className="hero-grid">
           <div>
