@@ -10,8 +10,8 @@ export default function ResumeBand() {
             <div>
               <h3>The one-page version</h3>
               <p>
-                Everything on this site, condensed for your ATS and hiring committee: experience,
-                systems, stack and contact details.
+                Everything on this site, condensed into a single page: experience, systems, stack
+                and contact details.
               </p>
             </div>
             <a className="btn btn-primary" href={person.resumeFile} download>

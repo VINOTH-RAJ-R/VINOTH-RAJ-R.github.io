@@ -70,7 +70,7 @@ const personJsonLd = {
   email: `mailto:${person.email}`,
   telephone: person.phoneHref,
   image: `${site.url}/og-image.png`,
-  sameAs: [person.linkedin, person.github],
+  sameAs: [person.linkedin, person.github, person.stackoverflow, person.frappeCommunity],
   worksFor: { "@type": "Organization", name: person.company },
   alumniOf: { "@type": "CollegeOrUniversity", name: "Sona College of Technology" },
   address: {
