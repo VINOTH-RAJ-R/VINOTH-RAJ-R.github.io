@@ -69,7 +69,7 @@ public/
 
 Everything you'd want to change — headline, case studies, metrics, contact info — lives in **`content/profile.ts`**. Components only render that data.
 
-To update the resume, replace `public/Vinoth-Raj-R-Resume.pdf` (keep the filename).
+To update the resume, replace `public/Vinoth-Raj-R.pdf` (keep the filename).
 
 To change the accent color, edit `--accent` / `--accent-2` in `app/globals.css`.
 

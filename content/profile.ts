@@ -5,6 +5,8 @@
 
 export const site = {
   url: "https://vinoth-raj-r.github.io",
+  // Paste the code from Google Search Console (HTML tag method) here, e.g. "AbC123..."
+  googleSiteVerification: "",
   title: "Vinoth Raj R | Software Engineer",
   description:
     "Software engineer building AI-powered calling pipelines, CRM automation, Android calling infrastructure and RAG assistants. 3.5+ years shipping production systems with Python, Frappe/ERPNext, Flutter and LLMs. Systems that replace manual work with intelligence.",
@@ -21,6 +23,13 @@ export const site = {
     "Sarvam AI",
     "CRM Automation",
     "Software Engineer India",
+    "AI Calling Pipeline",
+    "Voice AI Integration",
+    "Android Call Recording App",
+    "Dify Custom Frontend",
+    "RAG Chatbot Developer",
+    "Frappe CRM Customization",
+    "WhatsApp Automation WPPConnect",
   ],
 };
 
@@ -39,7 +48,7 @@ export const person = {
   github: "https://github.com/VINOTH-RAJ-R",
   stackoverflow: "https://stackoverflow.com/users/21301929",
   frappeCommunity: "https://discuss.frappe.io/u/vinoth",
-  resumeFile: "/Vinoth-Raj-R-Resume.pdf",
+  resumeFile: "/Vinoth-Raj-R.pdf",
   education: {
     school: "Sona College of Technology, Salem",
     detail: "B.E. graduated June 2022 · Final-year project: Face Mask Detection (ResNet50)",
@@ -53,7 +62,7 @@ export const hero = {
   sub: "Voice AI that screens thousands of leads before a human picks up the phone. Android calling infrastructure that went from 92% to 100% data reliability. RAG assistants built for 1,000+ users a day. I design the architecture, write the code and ship the whole system.",
   roleLine: "software developer @ assetplus · ai pipelines · frappe · python · flutter",
   ctaPrimary: { label: "See the work", href: "#work" },
-  ctaSecondary: { label: "Download resume", href: "/Vinoth-Raj-R-Resume.pdf" },
+  ctaSecondary: { label: "Download resume", href: "/Vinoth-Raj-R.pdf" },
   stats: [
     { value: 3.5, suffix: "+", label: "years shipping production systems", decimals: 1 },
     { value: 100, suffix: "%", label: "call-data reliability, up from 92%", decimals: 0 },

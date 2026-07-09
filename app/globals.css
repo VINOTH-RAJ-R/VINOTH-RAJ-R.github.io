@@ -1287,9 +1287,14 @@ h2.section-title {
   font-size: 13px;
   color: var(--faint);
 }
+/* email + phone get full rows; the four profiles pair up in a compact 2×2 */
 .contact-cards {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
+}
+.contact-cards > .reveal:nth-child(-n + 2) {
+  grid-column: span 2;
 }
 .contact-card {
   display: flex;
@@ -1437,6 +1442,12 @@ h2.section-title {
   }
   .contact-card {
     padding: 15px 16px;
+  }
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+  .contact-cards > .reveal:nth-child(-n + 2) {
+    grid-column: auto;
   }
   /* horizontal shifts feel cramped on touch — lift instead */
   .principle:hover,
