@@ -41,7 +41,7 @@ export default function Contact() {
     { icon: IconLinkedIn, label: "LinkedIn", value: "in/vinoth-raj-r", href: person.linkedin },
     { icon: IconGitHub, label: "GitHub", value: "VINOTH-RAJ-R", href: person.github },
     { icon: IconStackOverflow, label: "Stack Overflow", value: "users/21301929", href: person.stackoverflow },
-    { icon: IconFrappe, label: "Frappe Community", value: "discuss.frappe.io/u/vinoth", href: person.frappeCommunity },
+    { icon: IconFrappe, label: "Frappe Community", value: "u/vinoth", href: person.frappeCommunity },
   ];
 
   return (

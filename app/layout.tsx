@@ -42,6 +42,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: site.googleSiteVerification ? { google: site.googleSiteVerification } : undefined,
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
