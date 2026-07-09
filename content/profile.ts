@@ -6,7 +6,7 @@
 export const site = {
   url: "https://vinoth-raj-r.github.io",
   // Paste the code from Google Search Console (HTML tag method) here, e.g. "AbC123..."
-  googleSiteVerification: "",
+  googleSiteVerification: "w0CSxUYFRRl6SrRvwljNfOFCukF9GK999LXRjf1wK0E",
   title: "Vinoth Raj R | Software Engineer",
   description:
     "Software engineer building AI-powered calling pipelines, CRM automation, Android calling infrastructure and RAG assistants. 3.5+ years shipping production systems with Python, Frappe/ERPNext, Flutter and LLMs. Systems that replace manual work with intelligence.",
