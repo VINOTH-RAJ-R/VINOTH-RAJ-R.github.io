@@ -37,6 +37,8 @@ export const person = {
   phoneHref: "+919789404593",
   linkedin: "https://www.linkedin.com/in/vinoth-raj-r/",
   github: "https://github.com/VINOTH-RAJ-R",
+  stackoverflow: "https://stackoverflow.com/users/21301929",
+  frappeCommunity: "https://discuss.frappe.io/u/vinoth",
   resumeFile: "/Vinoth-Raj-R-Resume.pdf",
   education: {
     school: "Sona College of Technology, Salem",
@@ -87,7 +89,7 @@ export const about = {
     },
     {
       title: "AI with a job description",
-      body: "I use LLMs where they replace real labour: screening calls, scoring conversations, extracting fields. And I benchmark models against each other before trusting one.",
+      body: "I put LLMs on real responsibilities: screening calls, scoring conversations, extracting structured data. And I benchmark models against each other before trusting one.",
     },
   ],
 };
@@ -103,6 +105,7 @@ export const experience = [
     highlights: [
       "Designed and built an AI-powered calling pipeline on Sarvam AI that contacts advertisement leads automatically, performs first-level screening and prioritizes leads from call outcomes, pushing the hot ones to the team's WhatsApp groups and syncing everything to Zoho.",
       "Replaced traditional tele-calling by shipping a custom Android setup: a Flutter + Kotlin app that lets agents call via SIM while auto-capturing call logs and recordings into the CRM.",
+      "Together, the AI calling pipeline and the in-house calling app replaced the traditional tele-calling setup end to end, cutting the organisation's calling costs significantly while raising coverage: every lead gets called, every call gets captured.",
       "Built a server-side LLM pipeline (Sarvam AI, Gemini, OpenAI) that turns captured call recordings into QA summaries, tags, scoring metrics and coaching insights, stored against each lead.",
       "Developed WhatsApp automation with WPPConnect and Puppeteer integrated into Frappe for instant lead alerts and faster team response.",
       "Integrated Google Calendar for meeting scheduling, built Frappe Insights dashboards for team performance and lead conversion, and optimized real-time lead sync and message queues.",
@@ -176,6 +179,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "100%", label: "of new leads get a first AI call, Sundays included" },
       { value: "Instant", label: "prioritized-lead alerts in the team's WhatsApp groups" },
       { value: "First-level", label: "screening fully automated before human engagement" },
+      { value: "↓ Cost", label: "AI + in-house calling app run far cheaper than the traditional tele-calling setup" },
     ],
     stack: ["Python", "Frappe CRM", "Sarvam AI", "WPPConnect", "WhatsApp", "Zoho", "Slack", "MySQL", "Redis", "Cron/Queues"],
     confidential: true,
