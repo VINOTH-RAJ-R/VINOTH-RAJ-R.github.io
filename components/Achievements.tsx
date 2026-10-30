@@ -4,28 +4,28 @@ import Counter from "./Counter";
 
 export default function Achievements() {
   return (
-    <section className="section" id="achievements" aria-label="Achievements">
+    <section className="section surface-dark" id="achievements" aria-label="Impact in numbers">
       <div className="container">
         <Reveal className="section-head">
-          <p className="kicker">06 · Impact</p>
-          <h2 className="section-title">Measured, not claimed</h2>
-          <p className="section-sub">
+          <p className="eyebrow">Impact</p>
+          <h2 className="section-title">Measured, not claimed.</h2>
+          <p className="section-lead">
             Every number below comes from a shipped system: tracked in production, documented, and
             verifiable in an interview.
           </p>
         </Reveal>
 
         <Reveal>
-          <div className="metrics-grid">
+          <dl className="spec-grid spec-grid-3">
             {achievements.map((a, i) => (
-              <div className="metric" key={a.label}>
-                <b>
-                  <Counter value={a.value} suffix={a.suffix} decimals={a.decimals} duration={1300 + i * 150} />
-                </b>
-                <span className="stat-label">{a.label}</span>
+              <div className="spec" key={a.label}>
+                <dt className="spec-label">{a.label}</dt>
+                <dd className="spec-value">
+                  <Counter value={a.value} suffix={a.suffix} decimals={a.decimals} duration={1300 + i * 120} />
+                </dd>
               </div>
             ))}
-          </div>
+          </dl>
         </Reveal>
       </div>
     </section>

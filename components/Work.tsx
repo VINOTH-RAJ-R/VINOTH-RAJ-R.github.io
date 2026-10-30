@@ -23,80 +23,108 @@ const DIAGRAMS: Record<string, { el: React.ReactNode; caption: string }> = {
 
 export default function Work() {
   return (
-    <section className="section" id="work" aria-label="Featured work">
-      <div className="container">
-        <Reveal className="section-head">
-          <p className="kicker">03 · Featured work</p>
-          <h2 className="section-title">Case studies, not screenshots</h2>
-          <p className="section-sub">
-            Production systems I designed and built, presented as engineering case studies. Company
-            projects respect confidentiality: architecture and outcomes are shown, internals stay
-            private.
-          </p>
-        </Reveal>
+    <div id="work">
+      {caseStudies.map((cs, i) => {
+        const surface = i % 2 === 0 ? "surface-light" : "surface-dark";
+        return (
+          <section
+            key={cs.id}
+            className={`section case ${surface} ${i === 0 ? "case-first" : ""}`}
+            id={cs.id}
+            aria-labelledby={`${cs.id}-title`}
+          >
+            <div className="container">
+              {i === 0 && (
+                <Reveal className="section-head work-head">
+                  <p className="eyebrow">Featured work</p>
+                  <h2 className="section-title">Business problem in. Shipped system out.</h2>
+                  <p className="section-lead">
+                    Each case study reads the way the work happened: the problem the business had, what I
+                    built, and the impact it produced. Company projects respect confidentiality:
+                    architecture and outcomes are shown, internals stay private.
+                  </p>
+                </Reveal>
+              )}
 
-        {caseStudies.map((cs) => (
-          <Reveal key={cs.id}>
-            <article className="case" data-index={cs.index} id={cs.id}>
-              <p className="case-tag">{cs.tag}</p>
-              <h3>{cs.title}</h3>
-              <p className="case-oneliner">{cs.oneLiner}</p>
+              <Reveal className="case-head">
+                <p className="eyebrow">
+                  <span className="case-index">{cs.index}</span> {cs.tag}
+                </p>
+                <h3 className="case-title" id={`${cs.id}-title`}>
+                  {cs.title}
+                </h3>
+                <p className="case-oneliner">{cs.oneLiner}</p>
+              </Reveal>
 
-              <div className="case-cols">
-                <div className="case-block">
-                  <h4>The problem</h4>
-                  <p className="case-problem">{cs.problem}</p>
-                </div>
-                <div className="case-block">
-                  <h4>What I built</h4>
-                  <ul className="case-build">
-                    {cs.build.map((b, i) => (
-                      <li key={i}>
-                        <span className="step">{String(i + 1).padStart(2, "0")}</span>
-                        {b}
-                      </li>
+              <div className="psi">
+                <Reveal className="psi-col">
+                  <h4 className="psi-label">
+                    <span aria-hidden="true">1</span> The problem
+                  </h4>
+                  <p className="psi-problem">{cs.problem}</p>
+                </Reveal>
+                <Reveal className="psi-col" delay={90}>
+                  <h4 className="psi-label">
+                    <span aria-hidden="true">2</span> What I built
+                  </h4>
+                  <ol className="build-list">
+                    {cs.solution.map((b, j) => (
+                      <li key={j}>{b}</li>
                     ))}
-                  </ul>
-                </div>
+                  </ol>
+                </Reveal>
+                <Reveal className="psi-col" delay={180}>
+                  <h4 className="psi-label">
+                    <span aria-hidden="true">3</span> The impact
+                  </h4>
+                  <p className="psi-impact">{cs.impactSummary}</p>
+                </Reveal>
               </div>
 
-              <div className="diagram-wrap">
-                <div className="diagram-scroll">{DIAGRAMS[cs.id]?.el}</div>
-                <p className="diagram-caption">{DIAGRAMS[cs.id]?.caption}</p>
-              </div>
+              <Reveal>
+                <dl className="spec-grid case-specs">
+                  {cs.impact.map((o) => (
+                    <div className="spec" key={o.label}>
+                      <dt className="spec-label">{o.label}</dt>
+                      <dd className="spec-value">{o.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </Reveal>
 
-              <div className="decisions">
-                {cs.decisions.map((d) => (
-                  <div className="decision" key={d.title}>
-                    <h5>{d.title}</h5>
-                    <p>{d.body}</p>
-                  </div>
-                ))}
-              </div>
+              <Reveal>
+                <figure className="diagram">
+                  <div className="diagram-scroll">{DIAGRAMS[cs.id]?.el}</div>
+                  <figcaption className="diagram-caption">{DIAGRAMS[cs.id]?.caption}</figcaption>
+                </figure>
+              </Reveal>
 
-              <div className="case-foot">
-                <div className="outcomes">
-                  {cs.outcomes.map((o) => (
-                    <div className="outcome" key={o.label}>
-                      <b>{o.value}</b>
-                      <span>{o.label}</span>
+              <Reveal>
+                <h4 className="subhead">How it holds up in production</h4>
+                <div className="tiles tiles-3">
+                  {cs.decisions.map((d) => (
+                    <div className="tile" key={d.title}>
+                      <h5>{d.title}</h5>
+                      <p>{d.body}</p>
                     </div>
                   ))}
                 </div>
-                {cs.confidential && <span className="confidential">internal system · case study</span>}
-              </div>
+              </Reveal>
 
-              <div className="tag-row" style={{ marginTop: 22 }}>
-                {cs.stack.map((t) => (
-                  <span className="tag" key={t}>
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </article>
-          </Reveal>
-        ))}
-      </div>
-    </section>
+              <Reveal className="case-foot">
+                <ul className="tag-row" aria-label="Tech stack">
+                  {cs.stack.map((t) => (
+                    <li className="tag" key={t}>
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+                {cs.confidential && <span className="confidential">Internal system · case study</span>}
+              </Reveal>
+            </div>
+          </section>
+        );
+      })}
+    </div>
   );
 }

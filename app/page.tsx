@@ -1,5 +1,4 @@
 import Nav from "@/components/Nav";
-import CursorGlow from "@/components/CursorGlow";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -11,16 +10,21 @@ import ResumeBand from "@/components/ResumeBand";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+/**
+ * Product-page rhythm: full-width sections that alternate light and dark
+ * surfaces. Hero (light) → About (dark) → Work (case studies alternate)
+ * → Experience (light) → Open source (dark) → Expertise (light)
+ * → Impact (dark) → Resume + Contact (light).
+ */
 export default function Home() {
   return (
     <>
-      <CursorGlow />
       <Nav />
       <main id="main">
         <Hero />
         <About />
-        <Experience />
         <Work />
+        <Experience />
         <OpenSource />
         <Expertise />
         <Achievements />

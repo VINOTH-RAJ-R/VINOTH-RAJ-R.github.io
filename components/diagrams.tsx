@@ -1,7 +1,8 @@
 /**
  * Hand-drawn SVG architecture diagrams for each case study.
  * Animated with SMIL (animateMotion) + CSS dash animation — zero JS cost.
- * Text widths are budgeted: mono ≈ 7.5px/char at 12.5px labels, ≈ 5.7px/char at 9.5px subs.
+ * Colours come from CSS custom properties, so each diagram adapts to the light or dark
+ * surface it sits on. Text widths are budgeted for 12.5px labels and 9.5px subs.
  */
 
 type NodeProps = {
@@ -18,7 +19,7 @@ function Node({ x, y, w, h = 46, label, sub, hl }: NodeProps) {
   return (
     <g>
       <rect x={x} y={y} width={w} height={h} rx="10" className={`node ${hl ? "node-hl" : ""}`} />
-      <circle cx={x + 14} cy={y + h / 2} r="3" fill={hl ? "#2dd4bf" : "#475569"} />
+      <circle cx={x + 14} cy={y + h / 2} r="3" className={hl ? "dot dot-hl" : "dot"} />
       <text x={x + 26} y={y + (sub ? 20 : h / 2 + 4)} className="node-label">
         {label}
       </text>

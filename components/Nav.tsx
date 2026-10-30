@@ -5,8 +5,8 @@ import { person } from "@/content/profile";
 
 const LINKS = [
   { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
   { href: "#work", label: "Work" },
+  { href: "#experience", label: "Experience" },
   { href: "#open-source", label: "Open source" },
   { href: "#expertise", label: "Expertise" },
   { href: "#contact", label: "Contact" },
@@ -25,6 +25,7 @@ export default function Nav() {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
         setScrolled(window.scrollY > 24);
+        if (window.scrollY < 200) setActive("");
         const doc = document.documentElement;
         const max = doc.scrollHeight - doc.clientHeight;
         if (progressRef.current) {
@@ -56,8 +57,7 @@ export default function Nav() {
     <header className={`nav ${scrolled ? "scrolled" : ""}`}>
       <div className="container nav-inner">
         <a href="#" className="logo" aria-label={`${person.name} · home`}>
-          <span className="logo-mark">{person.monogram}</span>
-          <span>{person.shortName}</span>
+          <span>{person.name}</span>
         </a>
 
         <nav aria-label="Primary">
@@ -77,7 +77,7 @@ export default function Nav() {
         </nav>
 
         <a className="nav-cta" href={person.resumeFile} download>
-          Resume ↓
+          Resume
         </a>
 
         <button

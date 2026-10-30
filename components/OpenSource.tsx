@@ -3,41 +3,58 @@ import Reveal from "./Reveal";
 
 export default function OpenSource() {
   return (
-    <section className="section" id="open-source" aria-label="Open source">
+    <section className="section surface-dark" id="open-source" aria-label="Open source">
       <div className="container">
         <Reveal className="section-head">
-          <p className="kicker">04 · Open source</p>
-          <h2 className="section-title">Tools I give away</h2>
-          <p className="section-sub">
+          <p className="eyebrow">Open source</p>
+          <h2 className="section-title">Tools I give away.</h2>
+          <p className="section-lead">
             Recent open-source work, built from problems I hit shipping AI in production. Both are
             MIT-licensed and on GitHub.
           </p>
         </Reveal>
 
-        <div className="oss-grid">
-          {openSource.map((repo) => (
-            <Reveal key={repo.name}>
-              <article className="case oss-card">
-                <p className="case-tag">{repo.meta}</p>
+        <div className="tiles tiles-2 oss-grid">
+          {openSource.map((repo, i) => (
+            <Reveal key={repo.name} delay={i * 90}>
+              <article className="tile oss">
+                <p className="oss-meta">{repo.meta}</p>
                 <h3>
-                  <a href={repo.href} target="_blank" rel="noreferrer">
-                    {repo.name} <span aria-hidden="true">↗</span>
+                  <a href={repo.href} target="_blank" rel="noopener noreferrer">
+                    {repo.name}
+                    <span aria-hidden="true"> ↗</span>
                   </a>
                 </h3>
-                <p className="case-oneliner">{repo.tagline}</p>
-                <p className="case-problem">{repo.body}</p>
+                <p className="oss-tagline">{repo.tagline}</p>
+                <dl className="oss-psi">
+                  <div>
+                    <dt>The problem</dt>
+                    <dd>{repo.problem}</dd>
+                  </div>
+                  <div>
+                    <dt>What I built</dt>
+                    <dd>{repo.body}</dd>
+                  </div>
+                  <div>
+                    <dt>The impact</dt>
+                    <dd>{repo.impact}</dd>
+                  </div>
+                </dl>
                 <ul className="oss-points">
                   {repo.points.map((pt) => (
                     <li key={pt}>{pt}</li>
                   ))}
                 </ul>
-                <div className="tag-row" style={{ marginTop: 18 }}>
+                <ul className="tag-row" aria-label="Topics">
                   {repo.tags.map((t) => (
-                    <span className="tag" key={t}>
+                    <li className="tag" key={t}>
                       {t}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
+                <a className="link-more" href={repo.href} target="_blank" rel="noopener noreferrer">
+                  View {repo.name} on GitHub<span aria-hidden="true"> ›</span>
+                </a>
               </article>
             </Reveal>
           ))}

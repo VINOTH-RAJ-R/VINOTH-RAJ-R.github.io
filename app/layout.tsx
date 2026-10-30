@@ -54,7 +54,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#070b13",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fbfbfd" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
   width: "device-width",
   initialScale: 1,
 };
@@ -65,7 +68,7 @@ const personJsonLd = {
   "@type": "Person",
   name: person.name,
   alternateName: person.shortName,
-  jobTitle: "Software Engineer",
+  jobTitle: person.role,
   description: site.description,
   url: site.url,
   email: `mailto:${person.email}`,
@@ -118,7 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <script
@@ -134,8 +137,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <div className="atmosphere" aria-hidden="true" />
-        <div className="grid-overlay" aria-hidden="true" />
         {children}
       </body>
     </html>

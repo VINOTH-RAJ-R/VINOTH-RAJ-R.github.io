@@ -45,12 +45,12 @@ export default function Contact() {
   ];
 
   return (
-    <section className="section" id="contact" aria-label="Contact">
+    <section className="section surface-dark" id="contact" aria-label="Contact">
       <div className="container">
         <div className="contact-grid">
           <Reveal className="contact-copy">
-            <p className="kicker">07 · Contact</p>
-            <h2>{contact.title}</h2>
+            <p className="eyebrow">Contact</p>
+            <h2 className="section-title">{contact.title}</h2>
             <p>{contact.body}</p>
             <p className="contact-note">
               {contact.note} · {person.availability}
@@ -59,7 +59,7 @@ export default function Contact() {
 
           <div className="contact-cards">
             {cards.map((c, i) => (
-              <Reveal key={c.label} delay={i * 90}>
+              <Reveal key={c.label} delay={(i % 2) * 90}>
                 <a
                   className="contact-card"
                   href={c.href}

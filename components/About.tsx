@@ -3,31 +3,27 @@ import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <section className="section" id="about" aria-label="About">
+    <section className="section surface-dark" id="about" aria-label="About">
       <div className="container">
         <Reveal className="section-head">
-          <p className="kicker">01 · About</p>
-          <h2 className="section-title">{about.title}</h2>
+          <p className="eyebrow">About</p>
+          <h2 className="section-title">{about.title}.</h2>
+          <p className="section-lead">{about.lead}</p>
         </Reveal>
 
         <div className="about-grid">
-          <Reveal>
-            <p className="about-lead">{about.lead}</p>
-            <div className="about-copy">
-              {about.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
+          <Reveal className="about-copy">
+            {about.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
           </Reveal>
 
-          <div className="principles">
+          <div className="tiles tiles-2">
             {about.principles.map((p, i) => (
-              <Reveal key={p.title} delay={i * 90}>
-                <div className="principle">
-                  <h3>
-                    <span className="n">0{i + 1}</span>
-                    {p.title}
-                  </h3>
+              <Reveal key={p.title} delay={(i % 2) * 90}>
+                <div className="tile">
+                  <p className="tile-index">0{i + 1}</p>
+                  <h3>{p.title}</h3>
                   <p>{p.body}</p>
                 </div>
               </Reveal>
