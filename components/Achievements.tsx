@@ -7,7 +7,7 @@ export default function Achievements() {
     <section className="section" id="achievements" aria-label="Achievements">
       <div className="container">
         <Reveal className="section-head">
-          <p className="kicker">05 · Impact</p>
+          <p className="kicker">06 · Impact</p>
           <h2 className="section-title">Measured, not claimed</h2>
           <p className="section-sub">
             Every number below comes from a shipped system: tracked in production, documented, and

@@ -9,7 +9,7 @@ export const site = {
   googleSiteVerification: "w0CSxUYFRRl6SrRvwljNfOFCukF9GK999LXRjf1wK0E",
   title: "Vinoth Raj R | Software Engineer",
   description:
-    "Software engineer building AI-powered calling pipelines, CRM automation, Android calling infrastructure and RAG assistants. 3.5+ years shipping production systems with Python, Frappe/ERPNext, Flutter and LLMs. Systems that replace manual work with intelligence.",
+    "Software engineer building production AI systems: a full Frappe CRM, voice-AI lead calling, a root-free Android call-automation app, LLM call QA, and marketing & business-metrics dashboards. Open-source author of ai-knowhow and llm-json. 3.5+ years with Python, Frappe/ERPNext, Flutter, React and LLMs.",
   keywords: [
     "Vinoth Raj",
     "Vinoth Raj R",
@@ -30,6 +30,13 @@ export const site = {
     "RAG Chatbot Developer",
     "Frappe CRM Customization",
     "WhatsApp Automation WPPConnect",
+    "Marketing Analytics Dashboard",
+    "GA4 Meta Ads Dashboard",
+    "Meta Conversions API",
+    "Shizuku Call Recording",
+    "Open Source AI Tools",
+    "ai-knowhow modelwise",
+    "llm-json",
   ],
 };
 
@@ -51,7 +58,7 @@ export const person = {
   resumeFile: "/Vinoth-Raj-R.pdf",
   education: {
     school: "Sona College of Technology, Salem",
-    detail: "B.E. graduated June 2022 · Final-year project: Face Mask Detection (ResNet50)",
+    detail: "Bachelor of Information Technology, June 2022 · Final-year project: Face Mask Detection (ResNet50)",
   },
 };
 
@@ -59,8 +66,8 @@ export const hero = {
   eyebrow: "Vinoth Raj R · shipping AI systems in production",
   // Split for staggered animation
   headline: ["I engineer AI systems", "that do real work."],
-  sub: "Voice AI that screens thousands of leads before a human picks up the phone. Android calling infrastructure that went from 92% to 100% data reliability. RAG assistants built for 1,000+ users a day. I design the architecture, write the code and ship the whole system.",
-  roleLine: "software developer @ assetplus · ai pipelines · frappe · python · flutter",
+  sub: "A full CRM set up and run end to end. Voice AI that screens every lead before a human picks up the phone. A root-free Android call-automation app that went from 92% to 100% data reliability. The marketing and business-metrics dashboard leadership reads every morning. And open-source AI tools anyone can install. I design the architecture, write the code and ship the whole system.",
+  roleLine: "software engineer @ assetplus · ai · crm · mobile · analytics",
   ctaPrimary: { label: "See the work", href: "#work" },
   ctaSecondary: { label: "Download resume", href: "/Vinoth-Raj-R.pdf" },
   stats: [
@@ -80,7 +87,8 @@ export const about = {
   lead: "I'm a software engineer who ends up owning problems end-to-end: the business rule, the architecture, the API, the mobile app, the dashboard that proves it worked.",
   paragraphs: [
     "I started at Makto Technology building products for UAE operations: customer and delivery-agent apps in Flutter, a React admin panel, a warehouse management system, and five-plus ERPNext implementations across CRM, fleet, healthcare and education. That period taught me how businesses actually run, and how much of their day is manual work that software should be doing.",
-    "At AssetPlus, a financial services platform, I now build the AI layer of the sales operation. I replaced traditional tele-calling with a system of my own design: an AI voice pipeline that calls, screens and prioritizes advertisement leads, a custom Android calling app that captures every call and recording with zero data loss, and an LLM pipeline that turns raw call audio into QA scores, tags and insights inside the CRM.",
+    "At AssetPlus, a financial services platform, I now build the AI layer of the sales operation. I set up and run the company's Frappe CRM end to end, and replaced traditional tele-calling with a system of my own design: an AI voice pipeline that calls, screens and prioritizes advertisement leads, a root-free Android call-automation app that captures every call and recording with zero data loss, and an LLM pipeline that turns raw call audio into QA scores, tags and insights inside the CRM. I also built the analytics dashboard that puts website, video, ad spend and CRM conversions in front of management every morning.",
+    "I also publish open-source AI tooling: ai-knowhow, agent skills that pick the right model and effort for any task and turn finished AI work into lessons, and llm-json, a zero-dependency parser for messy model output.",
     "My bias is toward reliability. The interesting part of AI engineering isn't the demo. It's the retry policy, the dedup logic, the Sunday-aware scheduler, the token accounting, the webhook that never drops a payload. That's the work I enjoy most, and it's why the systems I build stay in production.",
   ],
   principles: [
@@ -106,20 +114,22 @@ export const about = {
 export const experience = [
   {
     company: "AssetPlus",
-    role: "Software Developer",
+    role: "Software Engineer",
     period: "Apr 2025 → Present",
     location: "On-site",
     summary:
-      "I own the AI and communication infrastructure around the sales CRM: the systems that decide which leads get called, call them, understand the calls, and route the results to humans.",
+      "I own the CRM and the AI and communication infrastructure around it: the systems that decide which leads get called, call them, understand the calls, route the results to humans, and report what it all produced.",
     highlights: [
+      "Set up and own the company's Frappe CRM end to end: lead capture from Meta Instant Forms and the website, AI-driven prioritization, Zoho sync, Google Calendar scheduling, WhatsApp and Slack alerts, and Frappe Insights dashboards. Integrated the Meta Conversions API so registrations flow back to Meta and ads optimise for real outcomes.",
       "Designed and built an AI-powered calling pipeline on Sarvam AI that contacts advertisement leads automatically, performs first-level screening and prioritizes leads from call outcomes, pushing the hot ones to the team's WhatsApp groups and syncing everything to Zoho.",
-      "Replaced traditional tele-calling by shipping a custom Android setup: a Flutter + Kotlin app that lets agents call via SIM while auto-capturing call logs and recordings into the CRM.",
+      "Replaced traditional tele-calling by shipping a call-automation app in Flutter + Kotlin that captures every SIM and WhatsApp call and recording into the CRM, re-engineered from a rooted custom ROM to a root-free build (Shizuku). App open at 1,000 calls went from 19.1 s to 3.9 s, and event-driven device-health reports let ops know the moment a phone stops recording.",
       "Together, the AI calling pipeline and the in-house calling app replaced the traditional tele-calling setup end to end, cutting the organisation's calling costs significantly while raising coverage: every lead gets called, every call gets captured.",
       "Built a server-side LLM pipeline (Sarvam AI, Gemini, OpenAI) that turns captured call recordings into QA summaries, tags, scoring metrics and coaching insights, stored against each lead.",
       "Developed WhatsApp automation with WPPConnect and Puppeteer integrated into Frappe for instant lead alerts and faster team response.",
-      "Integrated Google Calendar for meeting scheduling, built Frappe Insights dashboards for team performance and lead conversion, and optimized real-time lead sync and message queues.",
+      "Built the Har Ghar MFD marketing and business-metrics dashboard for management: GA4, Vimeo, Meta and Google Ads spend, Microsoft Clarity and CRM leads-to-deals in one place, refreshed daily by GitHub Actions, with a Gemini-powered AI Insights tab.",
+      "Rolling out my open-source ai-knowhow skills company-wide so every department picks the right AI model and effort for the job.",
     ],
-    tech: ["Python", "Frappe", "Sarvam AI", "Gemini", "OpenAI", "Flutter", "Kotlin", "WPPConnect", "MySQL", "Redis"],
+    tech: ["Python", "Frappe CRM", "Sarvam AI", "Gemini", "OpenAI", "Flutter", "Kotlin", "React", "GA4", "Meta Ads", "WPPConnect", "MySQL", "Redis"],
   },
   {
     company: "Makto Technology",
@@ -207,7 +217,8 @@ export const caseStudies: CaseStudy[] = [
       "A recording-discovery engine searches 60+ manufacturer recording locations with timestamp-based filename matching, an extended window for long calls, and skip-logic for 0-second calls that previously 'stole' audio files during resync.",
       "An offline-first upload queue sends multipart form-data to the Frappe API, retries when connectivity returns, and survives server downtime, plus a password-protected time-range recovery tool for audits.",
       "Duplicates were eliminated by root-causing a race condition: multiple triggers (call-end events, service restarts, manual resends) read the same checkpoint concurrently. The fix combined synchronized execution, per-record dedup tracking and server-side duplicate rejection.",
-      "The service is deliberately hard to kill: instant auto-restart on swipe-away, a 1-minute heartbeat alarm against aggressive battery savers, boot persistence, and start/stop audit logs pushed to the server so ops can see exactly when any device went dark.",
+      "The service is deliberately hard to kill: instant auto-restart on swipe-away, boot persistence, and event-driven health reports (recording service up or down, missing audio, a 2-hour heartbeat in working hours) so the server can alert ops on WhatsApp the moment a device stops recording. Per-status de-duplication took redundant status records from 13 to 0 per restart cycle.",
+      "Built to stay fast at volume: recording lookup moved off the startup path into one batched native index (app open at 1,000 calls: 19.1 s → 3.9 s), recordings written as mono 16 kHz in real time (about 6× smaller), and an hourly backfill that re-attaches late-arriving audio.",
       "Once a call log lands with audio, the server takes over. Sarvam AI transcribes the recording, then a four-prompt Gemini pipeline reviews every call like a QA analyst: Summary, Tags, Scoring Metrics and QA Questions. Outputs are parsed defensively (fence-stripping, balanced-brace extraction) and stored as structured insight on the call record, with token-usage tracking and an LLM benchmark harness governing model choice and cost.",
     ],
     decisions: [
@@ -227,6 +238,7 @@ export const caseStudies: CaseStudy[] = [
     outcomes: [
       { value: "92→100%", label: "recording upload reliability after v1.1.3" },
       { value: "0", label: "duplicate records after the race-condition fix" },
+      { value: "19.1→3.9s", label: "app open at 1,000 calls" },
       { value: "Root-free", label: "runs on stock phones; no market product does this" },
       { value: "Every call", label: "transcribed by Sarvam + QA-scored by 4 Gemini prompts" },
     ],
@@ -272,6 +284,77 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
+caseStudies.push({
+  id: "metrics-dashboard",
+  index: "04",
+  tag: "Marketing & Business Metrics · Data Engineering",
+  title: "One dashboard for every rupee and every lead",
+  oneLiner:
+    "A management dashboard that puts website traffic, video, ad spend and CRM conversions side by side for the Har Ghar MFD platform, refreshed every morning, honest about what each number can and cannot tell you, with an AI analyst built in.",
+  problem:
+    "Marketing data lived in five places: GA4, Vimeo, Meta Ads, Google Ads and the CRM. Each platform reported its own version of success. Meta claimed leads that never reached the CRM, Google reported none because no conversion was configured, and nobody could say what a lead actually cost per campaign.",
+  build: [
+    "A daily GitHub Actions job pulls GA4 (via Windsor.ai), Vimeo, Meta and Google Ads, Microsoft Clarity and Frappe CRM leads into versioned JSON, runs a verification step, and pushes. Vercel rebuilds on push, so the data is the database: no server and no API keys in the browser.",
+    "Executive overview, acquisition, content, video, ad-spend and leads-and-conversion tabs, each comparing the period against the previous one and against benchmark targets that cite their source.",
+    "Every ad figure is stated three ways: what the platform claimed, what reached the CRM, and what became a deal, with cost per lead ranked by campaign.",
+    "An admin-gated AI Insights tab (Gemini) writes the executive summary for any period and answers follow-up questions, grounded only on a bounded data brief built from the same JSON the dashboard shows.",
+    "Email-based access control and an AI-chat analytics tab show leadership what website visitors asked the platform's AI assistant.",
+  ],
+  decisions: [
+    {
+      title: "Show the claim, the arrival and the outcome",
+      body: "Ad platforms grade their own homework. Putting platform-reported leads next to CRM-received leads and closed deals turned a vanity metric into a cost-per-real-lead number.",
+    },
+    {
+      title: "Only compare like with like",
+      body: "A benchmark appears only when it measures exactly what the dashboard measures, with its source attached. Where nothing comparable exists, the card shows no target rather than a plausible-looking guess.",
+    },
+    {
+      title: "Find the leak, not just the number",
+      body: "The data showed 166 of 167 Google Ads leads arriving with no campaign, leaving ₹1.69 lakh of spend unattributable. I traced it to the website dropping UTM and gclid parameters and specified the capture fix and a Frappe lead-and-deal API.",
+    },
+  ],
+  outcomes: [
+    { value: "6", label: "data sources in one view, refreshed daily" },
+    { value: "3-way", label: "ad leads: claimed vs received vs converted" },
+    { value: "AI", label: "executive summaries and Q&A on any period" },
+    { value: "₹0", label: "servers: static site + scheduled sync" },
+  ],
+  stack: ["React", "Vite", "Vercel", "GitHub Actions", "GA4", "Windsor.ai", "Meta Ads", "Google Ads", "Vimeo", "Microsoft Clarity", "Frappe CRM", "Gemini"],
+  confidential: true,
+});
+
+export const openSource = [
+  {
+    name: "ai-knowhow",
+    href: "https://github.com/VINOTH-RAJ-R/ai-knowhow",
+    tagline: "Know what to build it with. Know how it was built.",
+    body: "Open-source agent skills for Claude Code, claude.ai, Codex and ChatGPT. modelwise turns a basic prompt from any department into a top-practitioner plan, the right model and reasoning effort for each phase, a cost comparison across models, and a prompt written for that model. modelwise-run then executes the task on the chosen Claude model. retrace turns a finished AI task into a saved lesson that teaches how it was done.",
+    points: [
+      "Validated registry of 61 Anthropic and OpenAI models",
+      "Cost per run and per 1,000 runs, compared across models",
+      "Plain Markdown, JSON and one dependency-free Python script",
+      "No server, no API keys, no data collection",
+    ],
+    meta: "MIT · Agent Skills · being rolled out company-wide at AssetPlus",
+    tags: ["Claude Code", "Agent Skills", "Prompt engineering", "LLM routing", "Python"],
+  },
+  {
+    name: "llm-json",
+    href: "https://github.com/VINOTH-RAJ-R/llm-json",
+    tagline: "Get a usable object from model output, or fail with the evidence.",
+    body: "You asked a model for JSON and got a preamble, a code fence, a truncated object or single quotes. llm-json extracts the object through staged, opt-in repairs, and when it can't, raises with the raw response, the stage it stopped at and your context attached, so a production parse failure is debuggable three days later.",
+    points: [
+      "Zero runtime dependencies, Python 3.9+",
+      "parse, parse(repair=True) and try_parse entry points",
+      "Failure carries raw text, last stage and caller context",
+      "CI-tested",
+    ],
+    meta: "MIT · Python",
+    tags: ["Python", "LLM", "Structured output", "Error handling"],
+  },
+];
+
 export const expertise = [
   {
     title: "AI & LLM Engineering",
@@ -291,7 +374,12 @@ export const expertise = [
   {
     title: "CRM & Business Platforms",
     body: "5+ ERPNext implementations across CRM, fleet, healthcare and education, plus deep Frappe CRM customization, Zoho sync, Google Calendar integration and Frappe Insights dashboards.",
-    tags: ["ERPNext", "Frappe CRM", "Zoho", "Google Calendar", "Frappe Insights"],
+    tags: ["ERPNext", "Frappe CRM", "Zoho", "Google Calendar", "Frappe Insights", "Meta Conversions API"],
+  },
+  {
+    title: "Marketing & Business Analytics",
+    body: "Dashboards leadership actually uses: GA4, ad-platform and CRM data joined into honest cost-per-lead and conversion views, scheduled syncs with verification, benchmarks with cited sources, and an AI analyst on top.",
+    tags: ["GA4", "Windsor.ai", "Meta & Google Ads", "Microsoft Clarity", "Vimeo", "GitHub Actions"],
   },
   {
     title: "Frontend Engineering",
@@ -312,6 +400,9 @@ export const achievements = [
   { value: 50, suffix: "%", label: "team productivity improvement from internal tooling", decimals: 0 },
   { value: 5, suffix: "+", label: "ERPNext implementations led across 4 industries", decimals: 0 },
   { value: 1000, suffix: "+", label: "users/day capacity engineered on free-tier infra", decimals: 0 },
+  { value: 4.9, suffix: "×", label: "faster app open at 1,000 calls (19.1 s → 3.9 s)", decimals: 1 },
+  { value: 2, suffix: "", label: "open-source AI projects published (ai-knowhow, llm-json)", decimals: 0 },
+  { value: 6, suffix: "", label: "marketing & business data sources unified in one daily dashboard", decimals: 0 },
 ];
 
 export const contact = {

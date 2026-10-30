@@ -94,6 +94,11 @@ const personJsonLd = {
     "CRM Automation",
     "Android Development",
     "RAG Systems",
+    "Marketing Analytics",
+    "Google Analytics 4",
+    "Meta Conversions API",
+    "Agent Skills",
+    "Open Source Software",
   ],
 };
 

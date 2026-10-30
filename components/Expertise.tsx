@@ -6,7 +6,7 @@ export default function Expertise() {
     <section className="section" id="expertise" aria-label="Engineering expertise">
       <div className="container">
         <Reveal className="section-head">
-          <p className="kicker">04 · Expertise</p>
+          <p className="kicker">05 · Expertise</p>
           <h2 className="section-title">What I build with what I know</h2>
           <p className="section-sub">
             Skills grouped the way they're actually used: capabilities that ship systems, not a

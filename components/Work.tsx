@@ -1,6 +1,6 @@
 import { caseStudies } from "@/content/profile";
 import Reveal from "./Reveal";
-import { LeadCallingDiagram, CallCaptureDiagram, RagDiagram } from "./diagrams";
+import { LeadCallingDiagram, CallCaptureDiagram, RagDiagram, MetricsDashboardDiagram } from "./diagrams";
 
 const DIAGRAMS: Record<string, { el: React.ReactNode; caption: string }> = {
   "ai-lead-calling": {
@@ -14,6 +14,10 @@ const DIAGRAMS: Record<string, { el: React.ReactNode; caption: string }> = {
   "knowledge-assistant": {
     el: <RagDiagram />,
     caption: "System flow: embedded widget → server-side proxy (key isolation + rate limiting) → Dify RAG → SSE streaming back to the user",
+  },
+  "metrics-dashboard": {
+    el: <MetricsDashboardDiagram />,
+    caption: "System flow: GA4, Vimeo, ad platforms, Clarity and CRM → daily GitHub Actions sync + verification → static React dashboard on Vercel → Gemini AI Insights",
   },
 };
 

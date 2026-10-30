@@ -49,7 +49,7 @@ export default function Contact() {
       <div className="container">
         <div className="contact-grid">
           <Reveal className="contact-copy">
-            <p className="kicker">06 · Contact</p>
+            <p className="kicker">07 · Contact</p>
             <h2>{contact.title}</h2>
             <p>{contact.body}</p>
             <p className="contact-note">

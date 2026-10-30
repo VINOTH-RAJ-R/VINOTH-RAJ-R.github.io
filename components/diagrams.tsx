@@ -148,3 +148,38 @@ export function RagDiagram() {
     </svg>
   );
 }
+
+/* ---------- 04 · Marketing & business-metrics dashboard ----------
+   Row 1: six sources → daily sync (left column → right)
+   Row 2: verified JSON → static dashboard → AI insights */
+export function MetricsDashboardDiagram() {
+  const sync = "M 184 140 H 268";
+  const out = "M 410 140 H 470";
+  const ai = "M 590 163 V 236";
+
+  return (
+    <svg className="arch" viewBox="0 0 720 320" role="img" aria-label="Architecture of the marketing and business-metrics dashboard: GA4, Vimeo, Meta and Google Ads, Microsoft Clarity and the Frappe CRM are pulled every morning by a GitHub Actions sync with a verification step into versioned JSON; Vercel rebuilds a static React dashboard, and a Gemini AI Insights tab answers questions from a bounded data brief.">
+      <rect x={10} y={14} width={190} height={292} className="zone" rx="14" />
+      <text x={26} y={36} className="zone-label">
+        sources
+      </text>
+      <path d="M 184 70 H 230 V 140" className="flow dash-anim" />
+      <path d="M 184 210 H 230 V 140" className="flow dash-anim" />
+      <path d={sync} className="flow dash-anim" />
+      <path d={out} className="flow flow-hl dash-anim" />
+      <path d={ai} className="flow flow-hl dash-anim" />
+      <Pulse path={"M 184 70 H 230 V 140 H 268"} dur={4} />
+      <Pulse path={"M 410 140 H 470"} dur={2.5} begin="0.8s" />
+      <Pulse path={ai} dur={2.5} begin="1.4s" opacity={0.75} />
+
+      <Node x={22} y={48} w={162} label="GA4 · Vimeo" sub="via Windsor.ai" />
+      <Node x={22} y={117} w={162} label="Meta · Google Ads" sub="spend · leads" />
+      <Node x={22} y={187} w={162} label="Clarity · CRM" sub="behaviour · deals" />
+      <Node x={268} y={117} w={142} label="Daily sync" sub="GitHub Actions" hl />
+      <Node x={470} y={117} w={240} label="Static dashboard" sub="React · Vercel · access-gated" />
+      <Node x={470} y={236} w={240} label="AI Insights" sub="Gemini · bounded data brief" hl />
+      <Node x={268} y={236} w={142} label="Verify" sub="checks before push" />
+      <path d="M 339 163 V 236" className="flow dash-anim" />
+    </svg>
+  );
+}

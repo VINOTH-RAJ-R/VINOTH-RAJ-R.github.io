@@ -8,10 +8,10 @@ export default function ResumeBand() {
         <Reveal>
           <div className="resume-band">
             <div>
-              <h3>The one-page version</h3>
+              <h3>The resume version</h3>
               <p>
-                Everything on this site, condensed into a single page: experience, systems, stack
-                and contact details.
+                Everything on this site in two pages: experience, systems, open source, stack and
+                contact details.
               </p>
             </div>
             <a className="btn btn-primary" href={person.resumeFile} download>

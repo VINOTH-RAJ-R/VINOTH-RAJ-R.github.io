@@ -1517,3 +1517,31 @@ h2.section-title {
     transform: none;
   }
 }
+
+/* Open source */
+.oss-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.oss-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.oss-card h3 a:hover {
+  color: #2dd4bf;
+}
+.oss-points {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: inherit;
+  opacity: 0.85;
+}
+.oss-points li + li {
+  margin-top: 4px;
+}
+@media (max-width: 860px) {
+  .oss-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

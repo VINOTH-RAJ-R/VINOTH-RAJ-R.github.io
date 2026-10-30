@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Work from "@/components/Work";
+import OpenSource from "@/components/OpenSource";
 import Expertise from "@/components/Expertise";
 import Achievements from "@/components/Achievements";
 import ResumeBand from "@/components/ResumeBand";
@@ -20,6 +21,7 @@ export default function Home() {
         <About />
         <Experience />
         <Work />
+        <OpenSource />
         <Expertise />
         <Achievements />
         <ResumeBand />
