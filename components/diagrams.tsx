@@ -1,6 +1,6 @@
 /**
  * Hand-drawn SVG architecture diagrams for each case study.
- * Animated with SMIL (animateMotion) + CSS dash animation — zero JS cost.
+ * Animated with SMIL (animateMotion) + CSS dash animation, zero JS cost.
  * Colours come from CSS custom properties, so each diagram adapts to the light or dark
  * surface it sits on. Text widths are budgeted for 12.5px labels and 9.5px subs.
  */
@@ -60,17 +60,17 @@ export function LeadCallingDiagram() {
       <Pulse path={main} dur={6} />
       <Pulse path={serpent} dur={5.5} begin="1.6s" opacity={0.75} />
 
-      {/* row 1 — the AI call flow */}
+      {/* row 1: the AI call flow */}
       <Node x={13} y={28} w={145} label="Ad lead" sub="Meta → CRM" />
       <Node x={196} y={28} w={145} label="Rules engine" sub="windows · retries" />
       <Node x={379} y={28} w={145} label="Sarvam AI call" sub="voice screening" hl />
       <Node x={562} y={28} w={145} label="Webhook ingest" sub="log · analytics" />
 
-      {/* row 2 — outcome → prioritization (flows right → left) */}
+      {/* row 2: outcome → prioritization (flows right → left) */}
       <Node x={545} y={140} w={160} label="Call outcome" sub="status · analytics" />
       <Node x={300} y={140} w={200} label="Prioritization" sub="high · medium · low" hl />
 
-      {/* row 3 — outputs */}
+      {/* row 3: outputs */}
       <Node x={13} y={250} w={180} label="WhatsApp groups" sub="WPPConnect alerts" hl />
       <Node x={240} y={250} w={130} label="Zoho sync" />
       <Node x={415} y={250} w={185} label="Human call queue" sub="→ calling app (02)" />
@@ -112,7 +112,7 @@ export function CallCaptureDiagram() {
       <Node x={25} y={196} w={180} label="Recording finder" sub="60+ paths · time match" />
       <Node x={250} y={116} w={170} label="Offline queue" sub="dedup · retry" hl />
 
-      {/* server side — capture → transcribe → QA */}
+      {/* server side: capture → transcribe → QA */}
       <Node x={478} y={116} w={212} label="Frappe CRM API" sub="multipart · dedup check" />
       <Node x={478} y={196} w={212} label="Sarvam transcription" sub="speech → transcript" hl />
       <Node x={478} y={276} w={212} label="Gemini QA agent" sub="summary · tags · metrics · QA" hl />

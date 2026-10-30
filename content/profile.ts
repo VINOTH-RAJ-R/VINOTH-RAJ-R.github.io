@@ -1,6 +1,6 @@
 /**
  * Single source of truth for every word on the site.
- * Edit here — components only render this data.
+ * Edit here; components only render this data.
  */
 
 export const site = {

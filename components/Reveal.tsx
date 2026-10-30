@@ -12,7 +12,7 @@ type Props = {
 
 /**
  * Reveals content when it enters the viewport.
- * Pure IntersectionObserver + CSS — no animation library needed.
+ * Pure IntersectionObserver + CSS, no animation library needed.
  */
 export default function Reveal({ children, className = "", delay = 0, id }: Props) {
   const ref = useRef<HTMLDivElement>(null);
