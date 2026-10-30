@@ -8,7 +8,7 @@ export default function ResumeBand() {
         <Reveal>
           <div className="resume-band">
             <p className="eyebrow">The resume</p>
-            <h2 className="section-title">Everything here, in two pages.</h2>
+            <h2 className="section-title">Everything here, on one resume.</h2>
             <p className="section-lead">
               Experience, systems, open source, stack and contact details, written the same way:
               problem, solution, impact.
