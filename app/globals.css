@@ -1208,3 +1208,108 @@ svg {
     transition: none;
   }
 }
+
+/* ---------- Product screenshots ---------- */
+.shots {
+  margin: 56px 0 8px;
+  display: grid;
+  gap: 40px;
+}
+.shot {
+  margin: 0;
+}
+.shot figcaption {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-2);
+}
+.frame-browser {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 30px 60px -24px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.surface-dark .frame-browser {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.8);
+}
+.frame-bar {
+  display: flex;
+  gap: 7px;
+  padding: 11px 14px;
+  background: #f1f1f3;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.frame-bar i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #d4d4d8;
+}
+.frame-bar i:nth-child(1) { background: #ff5f57; }
+.frame-bar i:nth-child(2) { background: #febc2e; }
+.frame-bar i:nth-child(3) { background: #28c840; }
+.frame-browser img,
+.frame-phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.shot-phones {
+  display: flex;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 48px);
+  flex-wrap: wrap;
+}
+.shot-phone {
+  width: min(280px, 42vw);
+}
+.frame-phone {
+  border-radius: 38px;
+  padding: 10px;
+  background: #1d1d1f;
+  box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.frame-phone img {
+  border-radius: 29px;
+}
+.shots-note {
+  margin: -16px 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-2);
+}
+@media (max-width: 640px) {
+  .shots { margin-top: 40px; gap: 28px; }
+  .frame-browser { border-radius: 10px; }
+  .frame-bar { padding: 8px 10px; }
+  .frame-bar i { width: 8px; height: 8px; }
+  .shot-phone { width: min(240px, 70vw); }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.shot-plain img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.6);
+}
+.oss .shots {
+  margin: 24px 0 28px;
+}
+.shot a {
+  display: block;
+  cursor: zoom-in;
+}

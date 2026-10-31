@@ -1,5 +1,6 @@
 import { openSource } from "@/content/profile";
 import Reveal from "./Reveal";
+import ShotGallery from "./ShotGallery";
 
 export default function OpenSource() {
   return (
@@ -26,6 +27,9 @@ export default function OpenSource() {
                   </a>
                 </h3>
                 <p className="oss-tagline">{repo.tagline}</p>
+                {"shots" in repo && repo.shots ? (
+                  <ShotGallery shots={repo.shots} label={`${repo.name}: screenshot`} note={false} />
+                ) : null}
                 <dl className="oss-psi">
                   <div>
                     <dt>The problem</dt>

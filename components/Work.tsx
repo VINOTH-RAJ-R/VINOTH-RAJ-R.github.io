@@ -1,5 +1,6 @@
 import { caseStudies } from "@/content/profile";
 import Reveal from "./Reveal";
+import ShotGallery from "./ShotGallery";
 import { LeadCallingDiagram, CallCaptureDiagram, RagDiagram, MetricsDashboardDiagram } from "./diagrams";
 
 const DIAGRAMS: Record<string, { el: React.ReactNode; caption: string }> = {
@@ -56,6 +57,8 @@ export default function Work() {
                 <p className="case-oneliner">{cs.oneLiner}</p>
               </Reveal>
 
+              <ShotGallery shots={cs.shots ?? []} label={`${cs.title}: product screenshots`} />
+
               <div className="psi">
                 <Reveal className="psi-col">
                   <h4 className="psi-label">
@@ -92,12 +95,14 @@ export default function Work() {
                 </dl>
               </Reveal>
 
+              {DIAGRAMS[cs.id] && (
               <Reveal>
                 <figure className="diagram">
                   <div className="diagram-scroll">{DIAGRAMS[cs.id]?.el}</div>
                   <figcaption className="diagram-caption">{DIAGRAMS[cs.id]?.caption}</figcaption>
                 </figure>
               </Reveal>
+              )}
 
               <Reveal>
                 <h4 className="subhead">How it holds up in production</h4>

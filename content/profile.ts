@@ -1,3 +1,5 @@
+import type { Shot } from "@/components/ShotGallery";
+
 /**
  * Single source of truth for every word on the site.
  * Edit here; components only render this data.
@@ -268,6 +270,8 @@ export type CaseStudy = {
   impact: { value: string; label: string }[];
   stack: string[];
   confidential?: boolean;
+  /** Product screenshots (dummy data) */
+  shots?: Shot[];
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -310,6 +314,9 @@ export const caseStudies: CaseStudy[] = [
       { value: "↓ Cost", label: "AI + in-house calling app run far cheaper than the traditional tele-calling setup" },
     ],
     stack: ["Python", "Frappe CRM", "Sarvam AI", "WPPConnect", "WhatsApp", "Zoho", "Slack", "MySQL", "Redis", "Cron/Queues"],
+    shots: [
+      { src: "/shots/glimpse-crm-leads.jpg", kind: "plain", alt: "Glimpse of the CRM: AI-screened leads with call status and priority, and a hot-lead alert in the sales WhatsApp group", caption: "Every new lead gets an AI first call; hot leads land in the sales team's WhatsApp in seconds." }
+    ],
     confidential: true,
   },
   {
@@ -354,6 +361,10 @@ export const caseStudies: CaseStudy[] = [
       { value: "Every call", label: "transcribed by Sarvam + QA-scored by 4 Gemini prompts" },
     ],
     stack: ["Flutter", "Dart", "Kotlin", "Android Services", "Telephony", "Frappe API", "Sarvam AI", "Gemini", "OpenAI", "Provider", "Dio"],
+    shots: [
+      { src: "/shots/glimpse-call-app.jpg", kind: "plain", alt: "Glimpse of the call app: utilisation ring, call and talk-time tiles, and recent call cards", caption: "A glimpse of the agent app: utilisation, talk time and every call captured." },
+      { src: "/shots/glimpse-call-qa.jpg", kind: "plain", alt: "Glimpse of AI call QA: speaker-separated transcript beside the AI QA score, summary, tags and scoring metrics", caption: "Each captured call comes back with a transcript and an AI QA review." }
+    ],
     confidential: true,
   },
   {
@@ -392,6 +403,9 @@ export const caseStudies: CaseStudy[] = [
       { value: "1,000+", label: "users/day designed for on free-tier infrastructure" },
       { value: "0", label: "API keys ever exposed to the browser" },
       { value: "2", label: "embed modes from a single codebase" },
+    ],
+    shots: [
+      { src: "/shots/glimpse-assistant.jpg", kind: "plain", alt: "Glimpse of the AI knowledge assistant widget answering a question about SIPs", caption: "The assistant answers from the knowledge base, streamed as it is written." }
     ],
     stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Dify", "SSE Streaming", "Vercel", "CSP"],
   },
@@ -436,7 +450,56 @@ caseStudies.push({
     { value: "₹0", label: "servers: static site + scheduled sync" },
   ],
   stack: ["React", "Vite", "Vercel", "GitHub Actions", "GA4", "Windsor.ai", "Meta Ads", "Google Ads", "Vimeo", "Microsoft Clarity", "Frappe CRM", "Gemini"],
+  shots: [
+      { src: "/shots/glimpse-dashboard.jpg", kind: "plain", alt: "Glimpse of the marketing dashboard: KPI tiles, cost per lead by campaign and a benchmark card", caption: "A glimpse of the dashboard: KPIs, cost per lead and benchmarks." },
+    ],
+    confidential: true,
+});
+
+caseStudies.push({
+  id: "call-intelligence",
+  index: "05",
+  tag: "AI Call Intelligence · Sales Analytics",
+  title: "What every sales call is really saying",
+  oneLiner:
+    "A Call Intelligence dashboard inside the CRM that turns thousands of AI-analysed sales calls into decisions: which leads are slipping, what customers object to, which agents need coaching on what, and which calls carry compliance risk.",
+  problem:
+    "Every call was recorded and reviewed by AI one at a time, but leadership still could not see the patterns: which leads were going cold, why prospects said no, which agents needed help, or whether anything said on a call put the business at compliance risk.",
+  solution: [
+    "Nine views built into Frappe CRM (Overview, Market Pulse, Leads at Risk, Team, Coaching, Conversion, AI Calling, AI Pipeline, Business Risk), all driven by one filter bar for date range, agent, source, intent and sentiment.",
+    "Overview tracks volume, quality and follow-up KPIs against the previous period, speed to lead, a best-time-to-call heatmap, the funnel from connected to committed, and how customer sentiment shifts from the start to the end of a call.",
+    "Market Pulse aggregates objections, competitor mentions, customer segments and verbatim customer quotes; Leads at Risk lists hot and warm leads whose AI-recommended follow-up is overdue.",
+    "Team and Coaching rank agents against the team median, map skill gaps for each stage of the call, and turn the data into a prioritised coaching list: low-scoring hot leads, sentiment drops, unresolved objections and robotic calls with no next step.",
+    "AI Calling compares the voice agent with human callers and measures the AI-to-human hand-off; AI Pipeline monitors processing status, how often human auditors agree with the AI, and rule-based consistency checks on every analysis.",
+    "Business Risk flags compliance issues such as false regulatory claims, requests for sensitive data and off-platform payments, each with the exact quote and timestamp as evidence, plus executive PDF and data exports.",
+  ],
+  decisions: [
+    {
+      title: "Evidence, not just scores",
+      body: "Every risk and coaching item links back to the call and quotes the exact words, so a manager can verify the AI before acting on it.",
+    },
+    {
+      title: "Audit the AI itself",
+      body: "Auditor verdicts are compared with the AI field by field, and consistency rules run on every analysis, so leadership knows how far to trust each number.",
+    },
+    {
+      title: "End every view in an action",
+      body: "Views end in a list someone can work through: overdue leads to call, agents to coach, risks to investigate. Not charts to admire.",
+    },
+  ],
+  impactSummary:
+    "Leadership sees on one screen which leads are slipping, what customers object to, who needs coaching on what, and which calls carry compliance risk, with the call itself as evidence.",
+  impact: [
+    { value: "9", label: "decision views on one shared filter" },
+    { value: "Every call", label: "AI-analysed and quality-checked" },
+    { value: "Quote-level", label: "evidence for each compliance risk" },
+    { value: "PDF · XLSX", label: "executive report and data exports" },
+  ],
+  stack: ["Frappe CRM", "Vue 3", "frappe-ui", "Python", "Gemini", "Sarvam AI", "SQL"],
   confidential: true,
+  shots: [
+    { src: "/shots/glimpse-call-intelligence.jpg", kind: "plain", alt: "Glimpse of the Call Intelligence dashboard: KPI cards with trends, a best-time-to-call heatmap, lead intent donut, top customer barriers and coaching priorities", caption: "A glimpse of Call Intelligence: KPIs, best time to call, lead intent, top objections and coaching priorities." },
+  ],
 });
 
 export const openSource = [
@@ -455,6 +518,9 @@ export const openSource = [
       "No server, no API keys, no data collection",
     ],
     meta: "MIT · Agent Skills · being rolled out company-wide at AssetPlus",
+    shots: [
+      { src: "/shots/glimpse-ai-knowhow.jpg", kind: "plain" as const, alt: "Glimpse of modelwise in the terminal: the command, the recommended model and the cost across models", caption: "modelwise prices a 5,000-ticket job across every current model." }
+    ],
     tags: ["Claude Code", "Agent Skills", "Prompt engineering", "LLM routing", "Python"],
   },
   {
