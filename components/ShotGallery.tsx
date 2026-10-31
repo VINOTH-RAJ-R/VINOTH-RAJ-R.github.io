@@ -7,8 +7,8 @@ export type Shot = {
   kind: "desktop" | "phone" | "plain";
 };
 
-/** Product screenshots in Apple-style device frames. All data shown is dummy data. */
-export default function ShotGallery({ shots, label, note = true }: { shots: Shot[]; label: string; note?: boolean }) {
+/** Product glimpses in Apple-style frames. Figures are illustrative, never real business data. */
+export default function ShotGallery({ shots, label }: { shots: Shot[]; label: string }) {
   if (!shots.length) return null;
   const desktop = shots.filter((s) => s.kind === "desktop");
   const phone = shots.filter((s) => s.kind === "phone");
@@ -53,7 +53,6 @@ export default function ShotGallery({ shots, label, note = true }: { shots: Shot
           ))}
         </div>
       )}
-      {note && <p className="shots-note">Screens shown with dummy data.</p>}
     </Reveal>
   );
 }

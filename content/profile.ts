@@ -206,7 +206,7 @@ export const experience: Role[] = [
         problem:
           "Marketing data lived in five places, each platform reported its own success, and nobody could say what a lead cost per campaign.",
         solution:
-          "Built the Har Ghar MFD marketing and business-metrics dashboard for management: GA4, Vimeo, Meta and Google Ads spend, Microsoft Clarity and CRM leads-to-deals in one place, refreshed daily by GitHub Actions, with a Gemini-powered AI Insights tab.",
+          "Built the marketing and business-metrics dashboard for management: GA4, Vimeo, Meta and Google Ads spend, Microsoft Clarity and CRM leads-to-deals in one place, refreshed daily by GitHub Actions, with a Gemini-powered AI Insights tab.",
         impact:
           "Management sees cost per real lead by campaign, platform-claimed vs CRM-received leads, and AI-written executive summaries every day.",
       },
@@ -315,7 +315,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Python", "Frappe CRM", "Sarvam AI", "WPPConnect", "WhatsApp", "Zoho", "Slack", "MySQL", "Redis", "Cron/Queues"],
     shots: [
-      { src: "/shots/glimpse-crm-leads.jpg", kind: "plain", alt: "Glimpse of the CRM: AI-screened leads with call status and priority, and a hot-lead alert in the sales WhatsApp group", caption: "Every new lead gets an AI first call; hot leads land in the sales team's WhatsApp in seconds." }
+      { src: "/shots/glimpse-crm-leads.jpg", kind: "plain", alt: "Glimpse of the CRM: AI-screened leads with call status and priority, and a hot-lead alert in the sales WhatsApp group", caption: "A glimpse of AI lead screening: every new lead gets a first call, and hot leads land in the sales team's WhatsApp." }
     ],
     confidential: true,
   },
@@ -363,7 +363,7 @@ export const caseStudies: CaseStudy[] = [
     stack: ["Flutter", "Dart", "Kotlin", "Android Services", "Telephony", "Frappe API", "Sarvam AI", "Gemini", "OpenAI", "Provider", "Dio"],
     shots: [
       { src: "/shots/glimpse-call-app.jpg", kind: "plain", alt: "Glimpse of the call app: utilisation ring, call and talk-time tiles, and recent call cards", caption: "A glimpse of the agent app: utilisation, talk time and every call captured." },
-      { src: "/shots/glimpse-call-qa.jpg", kind: "plain", alt: "Glimpse of AI call QA: speaker-separated transcript beside the AI QA score, summary, tags and scoring metrics", caption: "Each captured call comes back with a transcript and an AI QA review." }
+      { src: "/shots/glimpse-call-qa.jpg", kind: "plain", alt: "Glimpse of AI call QA: speaker-separated transcript beside the AI QA score, summary, tags and scoring metrics", caption: "A glimpse of AI call QA: a transcript and an AI review for every captured call." }
     ],
     confidential: true,
   },
@@ -405,7 +405,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "2", label: "embed modes from a single codebase" },
     ],
     shots: [
-      { src: "/shots/glimpse-assistant.jpg", kind: "plain", alt: "Glimpse of the AI knowledge assistant widget answering a question about SIPs", caption: "The assistant answers from the knowledge base, streamed as it is written." }
+      { src: "/shots/glimpse-assistant.jpg", kind: "plain", alt: "Glimpse of the AI knowledge assistant widget answering a question about SIPs", caption: "A glimpse of the assistant: answers from the knowledge base, streamed as they are written." }
     ],
     stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Dify", "SSE Streaming", "Vercel", "CSP"],
   },
@@ -417,7 +417,7 @@ caseStudies.push({
   tag: "Marketing & Business Metrics · Data Engineering",
   title: "One dashboard for every rupee and every lead",
   oneLiner:
-    "A management dashboard that puts website traffic, video, ad spend and CRM conversions side by side for the Har Ghar MFD platform, refreshed every morning, honest about what each number can and cannot tell you, with an AI analyst built in.",
+    "A management dashboard that puts website traffic, video, ad spend and CRM conversions side by side for a financial-education platform, refreshed every morning, honest about what each number can and cannot tell you, with an AI analyst built in.",
   problem:
     "Marketing data lived in five places: GA4, Vimeo, Meta Ads, Google Ads and the CRM. Each platform reported its own version of success. Meta claimed leads that never reached the CRM, Google reported none because no conversion was configured, and nobody could say what a lead actually cost per campaign.",
   solution: [
@@ -438,11 +438,11 @@ caseStudies.push({
     },
     {
       title: "Find the leak, not just the number",
-      body: "The data showed 166 of 167 Google Ads leads arriving with no campaign, leaving ₹1.69 lakh of spend unattributable. I traced it to the website dropping UTM and gclid parameters and specified the capture fix and a Frappe lead-and-deal API.",
+      body: "The data showed almost every website-sourced Google Ads lead reaching the CRM with no campaign attached, so that spend could not be judged per campaign. I traced it to the website dropping UTM and gclid parameters and specified the capture fix and a Frappe lead-and-deal API.",
     },
   ],
   impactSummary:
-    "Management sees cost per real lead by campaign, platform-claimed vs CRM-received leads and AI-written executive summaries every day, and the attribution leak behind ₹1.69 lakh of unattributable spend was traced and specified for a fix.",
+    "Management sees cost per real lead by campaign, platform-claimed vs CRM-received leads and AI-written executive summaries every day, and a campaign-attribution gap in Google Ads leads was traced and specified for a fix.",
   impact: [
     { value: "6", label: "data sources in one view, refreshed daily" },
     { value: "3-way", label: "ad leads: claimed vs received vs converted" },
@@ -519,7 +519,7 @@ export const openSource = [
     ],
     meta: "MIT · Agent Skills · being rolled out company-wide at AssetPlus",
     shots: [
-      { src: "/shots/glimpse-ai-knowhow.jpg", kind: "plain" as const, alt: "Glimpse of modelwise in the terminal: the command, the recommended model and the cost across models", caption: "modelwise prices a 5,000-ticket job across every current model." }
+      { src: "/shots/glimpse-ai-knowhow.jpg", kind: "plain" as const, alt: "Glimpse of modelwise in the terminal: the command, the recommended model and the cost across models", caption: "A glimpse of modelwise: one job priced across every current model." }
     ],
     tags: ["Claude Code", "Agent Skills", "Prompt engineering", "LLM routing", "Python"],
   },

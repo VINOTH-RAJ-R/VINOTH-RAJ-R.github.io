@@ -28,7 +28,7 @@ export default function OpenSource() {
                 </h3>
                 <p className="oss-tagline">{repo.tagline}</p>
                 {"shots" in repo && repo.shots ? (
-                  <ShotGallery shots={repo.shots} label={`${repo.name}: screenshot`} note={false} />
+                  <ShotGallery shots={repo.shots} label={`${repo.name}: screenshot`} />
                 ) : null}
                 <dl className="oss-psi">
                   <div>
